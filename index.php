@@ -1,10 +1,6 @@
 <?php
-
-$data = file_get_contents("https://hp-api.onrender.com/api/characters");
-$dataDecode = json_decode($data, true);
-var_dump($dataDecode);
+include_once "logic.php";
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -18,14 +14,19 @@ var_dump($dataDecode);
 
 <body>
     <div class="container">
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card’s
-                    content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="row row-cols-md-4">
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card’s
+                            content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
