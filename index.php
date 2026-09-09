@@ -14,20 +14,21 @@ include_once "logic.php";
 
 <body>
     <div class="container">
-        <div class="row row-cols-md-4">
-            <div class="col-md-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card’s
-                            content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
+        <div class="row text-center">
+            <?php foreach ($dataDecode as $chara): ?>
+                <div class="col-md-3 mb-4">
+                    <?php if (!empty($chara['image'])): ?>
+                        <div class="card h-100">
+                            <img src="<?= $chara['image'] ?>" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $chara['name'] ?></h5>
+                                <h6 class="card-text"><?= $chara['house'] ?></h6>
+                                <p class="card-text"><?= $chara['dateOfBirth'] ?></p>
+                            </div>
+                        </div>
+                    <?php endif; ?>
                 </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </body>
