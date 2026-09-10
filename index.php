@@ -46,12 +46,6 @@ include_once "logic.php";
                         <div class="card h-100 <?= getBorder($chara['gender']) ?> ">
                             <div class="position-relative">
                                 <img src="<?= $chara['image'] ?>" class="card-img-top" alt="<?= $chara['name'] ?>">
-                                <div class="position-absolute top-0 start-0">
-                                    <?php if (!empty($chara['house'])): ?>
-                                        <img src="<?= getHouse($chara['house']) ?>" class="house rounded-circle"
-                                            alt="Image des maisons">
-                                    <?php endif; ?>
-                                </div>
                                 <?php if (isset($chara['alive']) && $chara['alive'] === false): ?>
                                     <div class="position-absolute top-0 end-0 death">
                                         💀
@@ -60,9 +54,13 @@ include_once "logic.php";
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title"><?= $chara['name'] ?></h5>
+                                <?php if (!empty($chara['house'])): ?>
+                                    <img src="<?= getHouse($chara['house']) ?>" class="house rounded-circle"
+                                        alt="Image des maisons">
+                                <?php endif; ?>
                                 <h6 class="card-text"><?= $chara['house'] ?></h6>
-                                <p class="card-text"><?= $chara['dateOfBirth'] ?></p>
-                                <?php if (!empty($chara['yearOfBirth'])): ?>
+                                <?php if (!empty($chara['dateOfBirth'])): ?>
+                                    <p class="card-text"><?= $chara['dateOfBirth'] ?></p>
                                     <p class="card-text">
                                         Âge :
                                         <?= getAge($chara['yearOfBirth']) ?> ans
