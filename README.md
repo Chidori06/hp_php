@@ -75,7 +75,8 @@ Seuls les personnages avec une **image disponible** doivent apparaître.
 - Ajouter tout en haut de votre page le nombre de personnage
 - En vous basant sur le yearOfBirth si ça existe => mettez l'age du personnage à partir d'aujourd'hui (ne fait pas le calcul avec 2026 en dur !, vous renseigner sur les dates en PHP)
 
-
+---
+## Lancer le serveur
 Lancer le serveur avec la commande :
 ```php
 php -S localhost:8000
