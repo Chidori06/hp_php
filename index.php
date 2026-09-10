@@ -59,8 +59,8 @@ include_once "logic.php";
                                         alt="Image des maisons">
                                 <?php endif; ?>
                                 <h6 class="card-text"><?= $chara['house'] ?></h6>
-                                <?php if (!empty($chara['dateOfBirth'])): ?>
-                                    <p class="card-text"><?= $chara['dateOfBirth'] ?></p>
+                                <p class="card-text"><?= $chara['dateOfBirth'] ?></p>
+                                <?php if (!empty($chara['yearOfBirth'])): ?>
                                     <p class="card-text">
                                         Âge :
                                         <?= getAge($chara['yearOfBirth']) ?> ans
