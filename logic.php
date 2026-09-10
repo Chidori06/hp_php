@@ -3,11 +3,11 @@
 $data = file_get_contents("https://hp-api.onrender.com/api/characters");
 $dataDecode = json_decode($data, true);
 
-$nbPersonnages = 0;
+$nbChara = 0;
 
 foreach ($dataDecode as $chara) {
     if (!empty($chara['image'])) {
-        $nbPersonnages++;
+        $nbChara++;
     }
 }
 

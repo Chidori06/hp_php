@@ -34,9 +34,9 @@ include_once "logic.php";
     <h1 class="text-center my-4">
         Personnages Harry Potter
     </h1>
-    <p class="text-center mb-4">
+    <p class="text-center mb-4 bg-primary text-white">
         Nombre de personnages affichés :
-        <?= $nbPersonnages ?>
+        <?= $nbChara ?>
     </p>
     <div class="container">
         <div class="row text-center">
